@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Test.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Test.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.lang.*</span><span class="s0">;</span>
+<span class="s0">public class </span><span class="s1">Test {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] arg)</span>
+    <span class="s1">{</span>
+        <span class="s2">//creates instance of a generator</span>
+        <span class="s1">Generator generator = </span><span class="s0">new </span><span class="s1">Generator()</span><span class="s0">;</span>
+        <span class="s2">//sets the menagerie to the generators menagerie to avoid having to type out menagerie.generator or creating</span>
+        <span class="s2">//a second menagerie</span>
+        <span class="s1">Menagerie menagerie = generator.menagerie</span><span class="s0">;</span>
+        <span class="s2">//the Generate deals with the hard coded objects that were created keeping the main clean</span>
+        <span class="s1">generator.Generate()</span><span class="s0">;</span>
+
+        <span class="s2">//confirms that the objects were added to the collection as well as have access to methods</span>
+        <span class="s1">Animal test = menagerie.GetAnimal(</span><span class="s3">&quot;Great White Shark&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(test.name)</span><span class="s0">;</span>
+        <span class="s1">test.Move()</span><span class="s0">;</span>
+        <span class="s1">Animal test2 = menagerie.GetAnimal(</span><span class="s3">&quot;poison Dart Frog&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(test2.name)</span><span class="s0">;</span>
+        <span class="s1">test2.Move()</span><span class="s0">;</span>
+        <span class="s1">Animal test3 = menagerie.GetAnimal(</span><span class="s3">&quot;Human&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(test3.name)</span><span class="s0">;</span>
+        <span class="s1">test3.Move()</span><span class="s0">;</span>
+        <span class="s1">menagerie.GetAnimal(</span><span class="s3">&quot;dog&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
